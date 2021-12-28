@@ -40,7 +40,7 @@
     <section class="jumbotron text-center">
       <img src="img/Pas Foto 2.jpg" alt="Ahmad Yaris" width="200" bottom="50" height="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Ahmad Yaris</h1>
-      <p class="lead">DevsOps | Network Engineer</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#f3f4f5"
@@ -55,7 +55,7 @@
 
   <section id="about">
     
-    <div class="container"  data-aos='fade-down' data-aos-duration="2000">
+    <div class="container"  data-aos='fade-left' data-aos-duration="2000">
       <div class="row text-center mb-8">
         <div class="col">
           <h2> About Me</h2>
@@ -83,7 +83,7 @@
   <div class="row justify-content-around">
 
     <div class="col-md-4 mb-3">
-      <div class="card">
+      <div class="card" data-aos="zoom-in-up" ata-aos-duration="2000"> 
         <img src="img/project/0006.jpg" class="card-img-top" alt="project 1">
         <div class="card-body">
           <p class="card-text">Pernah mengikuti Sertifikasi CCNA Routing and Swithcing</p>
@@ -91,7 +91,7 @@
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <div class="card">
+      <div class="card" data-aos="zoom-in-up" ata-aos-duration="2000" data-aos-delay="10">
         <img src="img/project/0002.jpg" class="card-img-top" alt="project 2">
         <div class="card-body">
           <p class="card-text">Pernah mengikuti pelatihan Digital Enterpreneurship Academy (DEA) </p>
@@ -99,7 +99,7 @@
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <div class="card">
+      <div class="card" data-aos="zoom-in-up" ata-aos-duration="2000" data-aos-delay="20"> 
         <img src="img/project/0005.jpg" class="card-img-top" alt="project 3">
         <div class="card-body">
           <p class="card-text">Pernah mengikuti Kegiatan Kawah Kepemimpinan Pelajar (KKP) Se-Jawa Barat</p>
@@ -107,7 +107,7 @@
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <div class="card">
+      <div class="card" data-aos="zoom-in-up" ata-aos-duration="2000" data-aos-delay="30">
         <img src="img/project/0001.jpg" class="card-img-top" alt="project 4">
         <div class="card-body">
           <p class="card-text">Operator Mesin Ruffeng di PT Kaldu Sari Indonesia </p>
@@ -115,7 +115,7 @@
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <div class="card">
+      <div class="card" data-aos="zoom-in-up" ata-aos-duration="2000" data-aos-delay="40">
         <img src="img/project/0008.jpg" class="card-img-top" alt="project 4">
         <div class="card-body">
           <p class="card-text">Mengikuti Tes Bahasa Inggris (EPTIC) </p>
@@ -123,7 +123,7 @@
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <div class="card">
+      <div class="card" data-aos="zoom-in-up" ata-aos-duration="2000"data-aos-delay="50">
         <img src="img/project/0003.jpg" class="card-img-top" alt="project 5">
         <div class="card-body">
           <p class="card-text"> Pernah Mengikuti Pelatihan Kejuruan Teknolog Informasi dan Komunikasi </p>
@@ -192,9 +192,21 @@
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    once : true,
+  });
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+
+<script>
+gsap.registerPlugin(TextPlugin);
+gsap.to('.lead',{duration: 1.5 , delay: 1, text: 'Network Engineer | IT Support '} )
+gsap.from('.jumbotron img', { duration: 1, y: -100, opacity: 0, ease: 'bounce' });
+gsap.from('.navbar', {duration: 1.5, y: '-100%', opacity: 0, ease : 'elastic' }); 
+gsap.from('.display-4', {duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back' }); 
+</script> 
 
 
 <script>
