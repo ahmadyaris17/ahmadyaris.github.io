@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Ahmad Yaris</title>
   </head>
-  <body id="home">
+  <div id="home">
     <!-- Navbar  -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0099ff">
       <div class="container">
@@ -73,7 +73,7 @@
   <!-- Akhir About -->
 
   <!-- SERTIFIKAT -->
-  <section id="Projects">
+  <div id="Projects">
 <div class="container">
   <div class="row text-center mb-3">
     <div class="col">
@@ -132,10 +132,46 @@
     </div>
   </div>
 </div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffff" fill-opacity="1" d="M0,224L40,229.3C80,235,160,245,240,218.7C320,192,400,128,480,101.3C560,75,640,85,720,128C800,171,880,245,960,256C1040,267,1120,213,1200,202.7C1280,192,1360,224,1400,240L1440,256L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
-</section>
-<!-- Akhir SERTIFIKAT-->
 
+<section id="my-keyboard">
+<div class="container">
+  <div class="row text-center mb-3">
+    <div class="col">
+      <h2>My Keyboard</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="keyboard-box">
+        <h4 class="keyboard-name"> Keychron K2 </h4>
+        <img src="picture/keyboard 1.png" alt="Keychron K3" class="keyboard-img">
+        <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="keyboard-box">
+        <h4 class="keyboard-name"> Dragon Slayer </h4>
+        <img src="picture/keyboard 2.png" alt="Keychron K3" class="keyboard-img">
+        <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="keyboard-box">
+        <h4 class="keyboard-name"> Red Dragon </h4>
+        <img src="picture/keyboard 4.png" alt="Keychron K3" class="keyboard-img">
+        <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#ffff" fill-opacity="1" d="M0,224L40,229.3C80,235,160,245,240,218.7C320,192,400,128,480,101.3C560,75,640,85,720,128C800,171,880,245,960,256C1040,267,1120,213,1200,202.7C1280,192,1360,224,1400,240L1440,256L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+</div>
+<!-- Akhir SERTIFIKAT-->
 
 <!-- Contact -->
 <section id="contact">
@@ -238,5 +274,19 @@ gsap.from('.display-4', {duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'bac
       .catch(error => console.error('Error!', error.message))
   })
 </script>
+
+<!-- tilt JS -->
+<script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
+		max: 25,
+		speed: 400
+	});
+
+</script>
+
+
+<!-- AkHIR TILT JS -->
+
 </body>
 </html>
